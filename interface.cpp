@@ -4,7 +4,7 @@
 #include <clientinterface.h>
 #include <expenditureinterface.h>
 #include <Paymentinterface.h>
-//#include "AnnualReport.h"
+#include "AnnualReport.h"
 #include <limits>
 
 
@@ -16,7 +16,7 @@ void Interface::UserInterface() {
     ClientInterface inter;
     ExpenditureInterface expenditureInter;
     PaymentInterface PInter;
-    //AnnualReport annualReport;
+    AnnualReport annualReport;
 
 
     while (!exitProgramm) {
@@ -43,8 +43,8 @@ void Interface::UserInterface() {
                 break;
             case 4:{
                 system("cls");
-               // annualReport.loadIncomeAndExpenses("payments.txt", "expenses.txt");
-                //annualReport.displayAnnualReport();
+                annualReport.loadIncomeAndExpenses("payments.txt", "expenses.txt");
+                annualReport.displayAnnualReport();
                 std::cout << "Нажмите Enter для продолжения...";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;}
