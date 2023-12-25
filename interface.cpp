@@ -2,9 +2,9 @@
 #include <iostream>
 #include <interface.h>
 #include <clientinterface.h>
-#include <expenditureinterface.h>
-#include <Paymentinterface.h>
-#include "AnnualReport.h"
+//#include <expenditureinterface.h>
+//#include <Paymentinterface.h>
+//#include "AnnualReport.h"
 #include <limits>
 
 
@@ -14,9 +14,9 @@ void Interface::UserInterface() {
     int choice = 0;
     bool exitProgramm = false;
     ClientInterface inter;
-    ExpenditureInterface expenditureInter;
-    PaymentInterface PInter;
-    AnnualReport annualReport;
+    //ExpenditureInterface expenditureInter;
+    //PaymentInterface PInter;
+    //AnnualReport annualReport;
 
 
     while (!exitProgramm) {
@@ -34,17 +34,17 @@ void Interface::UserInterface() {
                 break;
 
             case 2:
-                PInter.PaymentInt();
+               // PInter.PaymentInt();
                 break;
             case 3:
-                expenditureInter.processChoice();
+               // expenditureInter.processChoice();
                 std::cin >> choice;
 
                 break;
             case 4:{
                 system("cls");
-                annualReport.loadIncomeAndExpenses("payments.txt", "expenses.txt");
-                annualReport.displayAnnualReport();
+               // annualReport.loadIncomeAndExpenses("payments.txt", "expenses.txt");
+                //annualReport.displayAnnualReport();
                 std::cout << "Нажмите Enter для продолжения...";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;}
