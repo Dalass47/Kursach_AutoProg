@@ -1,10 +1,16 @@
 #include <iostream>
+#include "interface.h"
 
 using namespace std;
 
+
 int main()
 {
-    cout << "Hello World!" << endl;
+
+    setlocale(LC_ALL, "");
+    Interface inter;
+
+    inter.UserInterface();
     return 0;
 }
 
