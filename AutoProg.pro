@@ -14,7 +14,8 @@ SOURCES += main.cpp \
     paymentlist.cpp \
     expenditureinterface.cpp \
     Expense.cpp \
-    ExpenseList.cpp
+    ExpenseList.cpp \
+    AnnualReport.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -29,5 +30,6 @@ HEADERS += \
     paymentlist.h \
     expenditureinterface.h \
     Expense.h \
-    ExpenseList.h
+    ExpenseList.h \
+    AnnualReport.h
 
