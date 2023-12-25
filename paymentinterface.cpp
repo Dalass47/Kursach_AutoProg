@@ -3,7 +3,7 @@
 #include <iostream>
 #include <limits>
 #include <PaymentInterface.h>
-//#include "AnnualReport.h"
+#include "AnnualReport.h"
 #include "ExpenseList.h"
 
 void PaymentInterface::PaymentInt() {
