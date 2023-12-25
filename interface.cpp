@@ -2,7 +2,7 @@
 #include <iostream>
 #include <interface.h>
 #include <clientinterface.h>
-//#include <expenditureinterface.h>
+#include <expenditureinterface.h>
 #include <Paymentinterface.h>
 //#include "AnnualReport.h"
 #include <limits>
@@ -14,7 +14,7 @@ void Interface::UserInterface() {
     int choice = 0;
     bool exitProgramm = false;
     ClientInterface inter;
-    //ExpenditureInterface expenditureInter;
+    ExpenditureInterface expenditureInter;
     PaymentInterface PInter;
     //AnnualReport annualReport;
 
@@ -37,7 +37,7 @@ void Interface::UserInterface() {
                 PInter.PaymentInt();
                 break;
             case 3:
-               // expenditureInter.processChoice();
+                expenditureInter.processChoice();
                 std::cin >> choice;
 
                 break;

@@ -11,7 +11,10 @@ SOURCES += main.cpp \
     clientlist.cpp \
     payment.cpp \
     paymentinterface.cpp \
-    paymentlist.cpp
+    paymentlist.cpp \
+    expenditureinterface.cpp \
+    Expense.cpp \
+    ExpenseList.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -23,5 +26,8 @@ HEADERS += \
     clientlist.h \
     payment.h \
     paymentinterface.h \
-    paymentlist.h
+    paymentlist.h \
+    expenditureinterface.h \
+    Expense.h \
+    ExpenseList.h
 
