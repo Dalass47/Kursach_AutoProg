@@ -3,7 +3,7 @@
 #include <interface.h>
 #include <clientinterface.h>
 //#include <expenditureinterface.h>
-//#include <Paymentinterface.h>
+#include <Paymentinterface.h>
 //#include "AnnualReport.h"
 #include <limits>
 
@@ -15,17 +15,17 @@ void Interface::UserInterface() {
     bool exitProgramm = false;
     ClientInterface inter;
     //ExpenditureInterface expenditureInter;
-    //PaymentInterface PInter;
+    PaymentInterface PInter;
     //AnnualReport annualReport;
 
 
     while (!exitProgramm) {
-        std::cout << "AutoProg ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ:\n";
-        std::cout << "1. Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð°Ð¼Ð¸ \n";
-        std::cout << "2. Ð—Ð°ÐºÐ°Ð·Ñ‹ Ð¸ Ð´Ð¾Ñ…Ð¾Ð´Ñ‹ \n";
-        std::cout << "3. Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ Ñ€Ð°ÑÑ…Ð¾Ð´Ð°Ð¼Ð¸ \n";
-        std::cout << "4. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð³Ð¾Ð´Ð¾Ð²Ð¾Ð¹ Ð¾Ñ‚Ñ‡ÐµÑ‚ \n";
-        std::cout << "9. Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ \n";
+        std::cout << "AutoProg óïðàâëåíèå:\n";
+        std::cout << "1. Ðàáîòà ñ êëèåíòàìè \n";
+        std::cout << "2. Çàêàçû è äîõîäû \n";
+        std::cout << "3. Ðàáîòà ñ ðàñõîäàìè \n";
+        std::cout << "4. Âûâåñòè ãîäîâîé îò÷åò \n";
+        std::cout << "9. Âûõîä èç ïðîãðàììû \n";
 
         std::cin >> choice;
         switch (choice) {
@@ -34,7 +34,7 @@ void Interface::UserInterface() {
                 break;
 
             case 2:
-               // PInter.PaymentInt();
+                PInter.PaymentInt();
                 break;
             case 3:
                // expenditureInter.processChoice();
@@ -45,14 +45,14 @@ void Interface::UserInterface() {
                 system("cls");
                // annualReport.loadIncomeAndExpenses("payments.txt", "expenses.txt");
                 //annualReport.displayAnnualReport();
-                std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Enter Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
+                std::cout << "Íàæìèòå Enter äëÿ ïðîäîëæåíèÿ...";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;}
             case 9:
                 exitProgramm = true;
                 break;
             default:
-                std::cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚\n";
+                std::cout << "Âûáåðèòå ïóíêò\n";
                 continue;
         }
 
